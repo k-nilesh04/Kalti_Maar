@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr1piel1x0ske"]
+[gd_scene load_steps=3 format=3 uid="uid://dr1piel1x0ske"]
 
 [ext_resource type="Script" uid="uid://cmukh74wp1yqo" path="res://Scripts/barrier.gd" id="1_mvya3"]
+[ext_resource type="Texture2D" uid="uid://bq3hd5ucjmyq2" path="res://Assests/Sprites/obstacles/barrieer.png" id="2_acj40"]
 
 [node name="barrier" type="Node2D"]
 script = ExtResource("1_mvya3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(278, 166)
+scale = Vector2(0.5882353, 0.50609756)
+texture = ExtResource("2_acj40")

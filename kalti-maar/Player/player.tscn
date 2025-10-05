@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqgr8i6ysfw3d"]
+[gd_scene load_steps=8 format=3 uid="uid://dqgr8i6ysfw3d"]
 
-[ext_resource type="Texture2D" uid="uid://40n4qm2cbhe1" path="res://Assests/Player/11.png" id="2_vtle1"]
+[ext_resource type="Script" uid="uid://ce4qbkrj57mnt" path="res://Player/player.gd" id="1_vtle1"]
 [ext_resource type="Texture2D" uid="uid://ck8phwx5x3fuk" path="res://Assests/Player/22.png" id="3_od3ui"]
 [ext_resource type="Texture2D" uid="uid://cs2p5cpjldl43" path="res://Assests/Player/1.png" id="3_vtle1"]
-[ext_resource type="Texture2D" uid="uid://bykiggql0m8hg" path="res://Assests/Player/33.png" id="4_00tjw"]
 [ext_resource type="Texture2D" uid="uid://cox7cbemueuto" path="res://Assests/Player/2.png" id="4_od3ui"]
 [ext_resource type="Texture2D" uid="uid://dq65v2r73vj52" path="res://Assests/Player/3.png" id="5_00tjw"]
 
@@ -11,7 +10,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vtle1")
+"texture": ExtResource("3_od3ui")
 }],
 "loop": true,
 "name": &"jump1",
@@ -27,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_00tjw")
+"texture": ExtResource("3_od3ui")
 }],
 "loop": true,
 "name": &"jump3",
@@ -58,18 +57,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhl08"]
-radius = 799.7687
-height = 1830.9167
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_od3ui"]
+radius = 121.0
+height = 376.0
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_vtle1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(321, 424.00003)
-scale = Vector2(0.19880748, 0.2260417)
+position = Vector2(155.00002, 467)
+scale = Vector2(0.13710935, 0.2211431)
 sprite_frames = SubResource("SpriteFrames_fhl08")
-animation = &"jump3"
+animation = &"jump1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
-position = Vector2(55.329906, -92.90335)
-shape = SubResource("CapsuleShape2D_fhl08")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(154, 448)
+shape = SubResource("CapsuleShape2D_od3ui")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg2barbthv5wd"]
+[gd_scene load_steps=6 format=3 uid="uid://cg2barbthv5wd"]
 
 [ext_resource type="PackedScene" uid="uid://b0fcn7em377ic" path="res://Scene/Effectors/Background/backgroundsc.tscn" id="2_8u3sf"]
 [ext_resource type="PackedScene" uid="uid://d38dklbowrqb5" path="res://Scene/backgroundFinal.tscn" id="2_233sh"]
 [ext_resource type="PackedScene" uid="uid://dqgr8i6ysfw3d" path="res://Player/player.tscn" id="3_8u3sf"]
+[ext_resource type="PackedScene" uid="uid://cbpua47qgmxq7" path="res://Spawner/spawner.tscn" id="4_d5vra"]
+[ext_resource type="Script" uid="uid://tmf5nhmnwpsy" path="res://Scripts/pothole.gd" id="5_mubqo"]
 
 [node name="KaltiMaar" type="Node2D"]
 
@@ -13,6 +15,13 @@ offset_right = 2010.0
 offset_bottom = 791.0
 
 [node name="bbb" parent="." instance=ExtResource("2_233sh")]
-position = Vector2(-122, -11)
+position = Vector2(-42, -23)
 
-[node name="Player" parent="." instance=ExtResource("3_8u3sf")]
+[node name="Player" parent="bbb" instance=ExtResource("3_8u3sf")]
+position = Vector2(64, 44)
+
+[node name="Spawner" parent="bbb/Player" instance=ExtResource("4_d5vra")]
+position = Vector2(1433, 562)
+script = ExtResource("5_mubqo")
+scroll_speed = 200.0
+cleanup_x = -200.0
