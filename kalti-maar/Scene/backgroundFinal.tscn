@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d38dklbowrqb5"]
+
+[ext_resource type="Shader" uid="uid://delmghw47aw6n" path="res://bbbbb.gdshader" id="1_2124n"]
+[ext_resource type="Texture2D" uid="uid://gir45o3h82up" path="res://Assests/Background/WhatsApp Image 2025-10-04 at 18.55.59.jpeg" id="2_i2otk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0rq8n"]
+shader = ExtResource("1_2124n")
+shader_parameter/scroll_speed = 0.4
+
+[node name="bbb" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_0rq8n")
+offset_left = -9.0
+offset_top = 4.0
+offset_right = 1271.0
+offset_bottom = 458.0
+texture = ExtResource("2_i2otk")
+stretch_mode = 1

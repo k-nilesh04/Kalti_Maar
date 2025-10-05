@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg2barbthv5wd"]
+
+[ext_resource type="PackedScene" uid="uid://b0fcn7em377ic" path="res://Scene/Effectors/Background/backgroundsc.tscn" id="2_8u3sf"]
+[ext_resource type="PackedScene" uid="uid://d38dklbowrqb5" path="res://Scene/backgroundFinal.tscn" id="2_233sh"]
+[ext_resource type="PackedScene" uid="uid://dqgr8i6ysfw3d" path="res://Player/player.tscn" id="3_8u3sf"]
+
+[node name="KaltiMaar" type="Node2D"]
+
+[node name="backgroundsc" parent="." instance=ExtResource("2_8u3sf")]
+offset_left = -32.0
+offset_top = 442.0
+offset_right = 2010.0
+offset_bottom = 791.0
+
+[node name="bbb" parent="." instance=ExtResource("2_233sh")]
+position = Vector2(-122, -11)
+
+[node name="Player" parent="." instance=ExtResource("3_8u3sf")]

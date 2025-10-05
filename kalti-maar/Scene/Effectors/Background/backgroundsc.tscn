@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0fcn7em377ic"]
+
+[ext_resource type="Shader" uid="uid://35yppg8vw3es" path="res://Scene/Effectors/Background/backgroundsc.gdshader" id="1_qbnu2"]
+[ext_resource type="Script" uid="uid://budbq2k6nl5r2" path="res://Scripts/backgroundsc.gd" id="2_qp63s"]
+[ext_resource type="Texture2D" uid="uid://bf3e3cs12hon4" path="res://Assests/Background/road.jpg" id="2_woad2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_woad2"]
+shader = ExtResource("1_qbnu2")
+shader_parameter/scroll_speed = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp63s"]
+size = Vector2(1448, 286.5)
+
+[node name="backgroundsc" type="TextureRect"]
+material = SubResource("ShaderMaterial_woad2")
+offset_left = 8.0
+offset_top = 357.0
+offset_right = 2597.0
+offset_bottom = 706.0
+texture = ExtResource("2_woad2")
+stretch_mode = 1
+script = ExtResource("2_qp63s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(725, 315)
+shape = SubResource("RectangleShape2D_qp63s")

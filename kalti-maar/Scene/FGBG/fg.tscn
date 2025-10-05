@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2burcet4ppxa"]
+
+[ext_resource type="PackedScene" uid="uid://b0fcn7em377ic" path="res://Scene/Effectors/Background/backgroundsc.tscn" id="1_nukki"]
+[ext_resource type="Texture2D" uid="uid://gir45o3h82up" path="res://Assests/Background/WhatsApp Image 2025-10-04 at 18.55.59.jpeg" id="2_c38iv"]
+
+[node name="fg" type="Node2D"]
+
+[node name="backgroundsc2" parent="." instance=ExtResource("1_nukki")]
+offset_left = -11.0
+offset_top = -56.0
+offset_right = 1348.0
+offset_bottom = 401.0
+texture = ExtResource("2_c38iv")
