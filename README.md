@@ -18,4 +18,6 @@ Engine: Godot 4.5
 
 Language: GDScript
 
-Platform: Windows / Web
+Platform: Windows
+
+Created by Team MNA as a simple endless runner project for learning and fun.
