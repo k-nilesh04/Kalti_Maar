@@ -20,4 +20,4 @@ Language: GDScript
 
 Platform: Windows
 
-Created by Team MNA as a simple endless runner project for learning and fun.
+Created by Team MAN as a simple endless runner project for learning and fun.
